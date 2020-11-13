@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Type Faster, Train Your Typing Double your typing speed. Learn keyboarding in a fun way. Test your wpm speed and accuracy. Play top-notch typing games. Find it all from SpeedTypingMaster!">
+    <meta name="keywords" content="English Bangla Typing Application">
+    <meta name="author" content="Shaheb Ali">
+
+    <meta property="og:title" content="Speed Typing Master">
+    <meta property="og:description" content="Type Faster, Train Your Typing Double your typing speed. Learn keyboarding in a fun way. Test your wpm speed and accuracy. Play top-notch typing games. Find it all from SpeedTypingMaster!">
+    <meta property="og:image" content="img/thumbnail.png">
+    <meta property="og:url" content="https://systembugbd.github.io/speed-typing-master/">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Speed Typing Master</title>
+</head>
+
+<body id="body">
+
+    <div class="container">
+        <div class="alert alert-primary align-content-center headingContainer" role="alert">
+            <h1 class="display-4 align-content-center">বাংলা টাইপের বাধাহীন সম্ভাবনা নিয়ে<br>স্পীড টাইপিং মাষ্টার</h1>
+            <h1 class="display-4 align-content-center">SPEED TYPING MASTER</h1>
+            <p>Type Faster, Train Your Typing Double your typing speed. Learn keyboarding in a fun way. Test your wpm speed and accuracy. Play top-notch typing games. Find it all from SpeedTypingMaster!</p>
+            <hr>
+
+            <div class="custom-control custom-switch col-auto my-1" id="controllSwitch">
+                <div class="child">
+                    <input type="checkbox" class="custom-control-input switchNightMood" id="nightMood">
+                    <label class="custom-control-label switchNightMood" for="nightMood">Night Mood</label></div>
+
+                <div class="child2">
+                    <input type="checkbox" class="custom-control-input switchNightMood" id="continiousType">
+                    <label class="custom-control-label switchContiniousType" for="continiousType">Continious Type</label>
+                </div>
+
+
+                <div class="child3">
+                    <input type="checkbox" class="custom-control-input switchBanglaOn" id="banglaOn">
+                    <label class="custom-control-label switchBanglaOnLabel" for="banglaOn">Bangla Type</label>
+                </div>
+
+
+                <div id="bangaKeyRadioContainer">
+                    <form name="editorform" id="keyboardSelection">
+                        <fieldset>
+                            <legend>
+                                যেকোন একটি কিবোড সিলেক্ট করুন, আর শুরু করে দিন বাংলা লেখা-
+                            </legend>
+                            <hr>
+                            <div class="col-sm-12">
+                                <input type="radio" name="layoutGrp" id="UniBijoy" onclick="activeKeyBoard(this.value, 'textarea');switched=false;" value="bvkunijoy" title="Textarea তে বাংলা লেখার জন্য" />
+                                <label class="badge badge-pill badge-info" for="UniBijoy">UniBijoy </label>
+
+                                <input type="radio" name="layoutGrp" id="Phonetic" onclick="activeKeyBoard(this.value, 'textarea');switched=false;" value="bvkphonetic" title="Title এ বাংলা লেখার জন্য" />
+                                <label class="badge badge-pill badge-primary" for="Phonetic">Phonetic</label>
+
+                                <input type="radio" name="layoutGrp" id="Inscript" onclick="activeKeyBoard(this.value, 'textarea');switched=false;" value="bvkinscript" title="Textarea তে বাংলা লেখার জন্য" />
+                                <label class="badge badge-pill badge-danger" for="Inscript">Inscript </label>
+
+                                <input type="radio" name="layoutGrp" id="Probhat" onclick="activeKeyBoard(this.value, 'textarea');switched=false;" value="bvkprobh" title="Textarea তে বাংলা লেখার জন্য" />
+                                <label class="badge badge-pill badge-warning" for="Probhat">Probhat </label>
+
+                                <input type="radio" name="layoutGrp" id="Phonetic_Int" onclick="activeKeyBoard(this.value, 'textarea');switched=false;" value="bvkphonetici" title="Textarea তে বাংলা লেখার জন্য" />
+                                <label class="badge badge-pill badge-success" for="Phonetic_Int">Phonetic Int. </label>
+
+                                <input type="radio" name="layoutGrp" id="English" onclick="activeKeyBoard(this.value, 'textarea');switched=true;" value="bvkenglish" checked title="Textarea & Text তে বাংলা লেখার জন্য" />
+                                <label class="badge badge-pill badge-primary" for="English">English </label>
+                            </div>
+
+                            <!-- <div>
+                                <textarea name="shahebBanglaType" class="form-control" id="shahebBanglaType" cols="90" rows="15"></textarea>
+                            </div> -->
+                        </fieldset>
+                        <br />
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="form">
+
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-auto my-1">
+                        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                        <div class="input-group">
+                            <input class="form-control" id="selectedTime" type="number" name="" placeholder="Calculated 1 = 60sec" aria-label="Recipient's Time" aria-describedby="my-addon">
+
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="selectedTime">Time in Min</span>
+                            </div>
+                            <input class="form-control" id="yourName" type="text" name="" placeholder="Enter Your Name" aria-label="Recipient's Name" aria-describedby="my-addon">
+                        </div>
+                        </select>
+                    </div>
+                    <div class="col-auto my-1">
+                        <div class="custom-control custom-checkbox mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="remember" checked>
+                            <label class="custom-control-label rememberme" for="remember">Remember Me</label>
+                        </div>
+                    </div>
+                    <div class="col-auto my-1">
+                        <button type="button" id="submit" class="btn btn-primary alert">Play With Time Frame</button>
+
+                    </div>
+
+                    <div class="alert alert-light" role="alert">
+                        <div id="minTimeEl"></div>
+
+                    </div>
+
+
+                </div>
+            </form>
+
+        </div>
+
+        <div class="alert alert-primary" role="alert" id="quoteConteiner">
+            <span id="typingText" class="typingText"></span>
+            <!-- <span id="typingText2" class="typingText2"></span> -->
+        </div>
+
+        <div class="form-group" id="textAreaContainer">
+            <label for="my-textarea" class="typeHereLabel alert alert-info">Type Above Text Below</label>
+            <textarea id="textarea" class="form-control" name="" rows="2" placeholder="Type Here..." autofocus></textarea>
+            <div id="message" class="message"></div>
+        </div>
+
+
+
+        <div class="alert alert-secondary hidden showResult" id="showResult" role="alert">
+            <h4 class="alert-heading">Well done! <span id="showName"></span> Your Typing score are shown below...</h4>
+
+            <div class="card">
+
+                <div class="card-body">
+                    <h5 id="totalTime"></h5>
+                    <p id="correctWord"></p>
+                    <p id="inCorrectWord"></p>
+                    <p id="totalWord"></p>
+                    <p id="note">You are good in typing but need to improve your typing skills like speed up and increase your accuracy level, You typed <span id="wpm"></span></p>
+
+                    <p class="alert alert-warning" id="award">This info is only saved in your browser</p>
+                </div>
+            </div>
+
+            <hr>
+            <p class="mb-0">This is a demo application, There are may be some bug, Please fill free to inform me...</p>
+        </div>
+
+
+
+        <!--Score List-->
+        <ul class="list-group col-sm-4">
+            <li>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1" id="cardName">Shaheb</h5>
+                        <small id="skillLevel">Pro Level</small>
+
+                        <small id="cardWPM">65WPM</small>
+                    </div>
+
+
+                </a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Correct Word
+                <span class="badge badge-primary badge-pill" id="correctScore">30</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                In-correct Word
+                <span class="badge badge-primary badge-pill" id="inCorrectScore">2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Total Word
+                <span class="badge badge-primary badge-pill" id="totalScore">59</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Gross WPM
+                <span class="badge badge-primary badge-pill" id="grossScore">40</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Net WPM
+                <span class="badge badge-primary badge-pill" id="netScore">40</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Accuracy
+                <span class="badge badge-primary badge-pill" id="accuracyScore">40</span>
+            </li>
+        </ul>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/inscriptunicode.js"></script>
+    <script src="js/phonetic_int.js"></script>
+    <script src="js/phoneticunicode.js"></script>
+    <script src="js/probhatunicode.js"></script>
+    <script src="js/avro-v1.1.4.min.js"></script>
+    <script src="js/unijoy.js"></script>
+    <script src="js/custom-button.js"></script>
+    <script src="bangla.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

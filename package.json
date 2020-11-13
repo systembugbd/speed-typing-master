@@ -1,0 +1,24 @@
+{
+    "name": "typing-master",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/systembugbd/speed-typing-master.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/systembugbd/speed-typing-master/issues"
+    },
+
+    "engines": {
+        "node": "10.16.1"
+    },
+    "homepage": "https://github.com/systembugbd/speed-typing-master#readme"
+}
